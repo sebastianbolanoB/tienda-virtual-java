@@ -1,0 +1,5 @@
+# Clases compiladas
+bin/
+build/
+*.class
+salida_*.txt
