@@ -1,0 +1,19 @@
+<%-- Fragmento que se agrega con la directiva include: sus declaraciones quedan en cada página --%>
+<%@ page import="java.math.BigDecimal, java.text.NumberFormat, java.util.Locale" %>
+<%!
+    /** Formato de pesos colombianos sin decimales: $ 89.900 */
+    private String pesos(BigDecimal valor) {
+        NumberFormat formato = NumberFormat.getCurrencyInstance(Locale.forLanguageTag("es-CO"));
+        formato.setMaximumFractionDigits(0);
+        return valor == null ? "" : formato.format(valor);
+    }
+
+    /** Escapa el texto antes de escribirlo en el HTML (evita inyección de código, XSS) */
+    private String e(Object valor) {
+        if (valor == null) {
+            return "";
+        }
+        return valor.toString().replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                .replace("\"", "&quot;").replace("'", "&#39;");
+    }
+%>

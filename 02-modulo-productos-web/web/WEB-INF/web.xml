@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_1.xsd"
+         version="6.1">
+
+    <display-name>TiendaVirtual - Módulo de productos</display-name>
+
+    <!-- Los formularios y las respuestas usan UTF-8 (tildes y eñes) -->
+    <request-character-encoding>UTF-8</request-character-encoding>
+    <response-character-encoding>UTF-8</response-character-encoding>
+
+    <!-- Los servlets se registran con la anotación @WebServlet en cada clase -->
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+        <cookie-config>
+            <http-only>true</http-only>
+        </cookie-config>
+    </session-config>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/vistas/error.jsp</location>
+    </error-page>
+    <error-page>
+        <exception-type>jakarta.servlet.ServletException</exception-type>
+        <location>/WEB-INF/vistas/error.jsp</location>
+    </error-page>
+</web-app>

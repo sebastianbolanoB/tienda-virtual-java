@@ -1,0 +1,59 @@
+/* Estilos del módulo de productos de TiendaVirtual */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; color: #1f2933; background: #f5f6f8; }
+h1 { font-size: 1.6rem; margin: 0 0 1rem; }
+h2 { font-size: 1.15rem; margin: 1.5rem 0 .75rem; }
+
+.barra { display: flex; justify-content: space-between; align-items: center; padding: .8rem 2rem;
+         background: #1f3a5f; color: #fff; }
+.barra .marca { color: #fff; font-weight: 700; font-size: 1.2rem; text-decoration: none; }
+.barra nav a { color: #d6e2f0; margin-left: 1.5rem; text-decoration: none; }
+.barra nav a.activo { color: #fff; border-bottom: 2px solid #fff; }
+
+.contenido { max-width: 1180px; margin: 0 auto; padding: 1.5rem 2rem 2rem; }
+
+.filtros, .formulario { display: flex; flex-wrap: wrap; gap: .8rem 1rem; align-items: flex-end;
+                        background: #fff; border: 1px solid #d9dee5; border-radius: 6px; padding: 1rem; }
+.formulario h2 { width: 100%; margin: 0; }
+label { display: flex; flex-direction: column; font-size: .85rem; font-weight: 600; gap: .25rem; }
+label.ancho { flex: 1 1 320px; }
+input, select, textarea { font: inherit; font-weight: 400; padding: .45rem .55rem; border: 1px solid #b8c2cc;
+                          border-radius: 4px; min-width: 150px; background: #fff; }
+textarea { width: 100%; }
+button, .boton { font: inherit; padding: .5rem 1rem; border: 0; border-radius: 4px; background: #1f3a5f;
+                 color: #fff; cursor: pointer; text-decoration: none; display: inline-block; }
+button.secundario { background: #fff; color: #1f3a5f; border: 1px solid #1f3a5f; padding: .3rem .7rem; }
+.enlace { color: #1f3a5f; }
+.acciones { width: 100%; display: flex; gap: 1rem; align-items: center; }
+
+.resumen { color: #52606d; }
+.tarjetas { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+.tarjeta, .detalle { background: #fff; border: 1px solid #d9dee5; border-radius: 6px; padding: 1rem; }
+.tarjeta h2 { margin: .3rem 0; font-size: 1.05rem; }
+.categoria { font-size: .75rem; text-transform: uppercase; color: #52606d; letter-spacing: .04em; }
+.marca-producto { color: #52606d; font-size: .85rem; margin: 0 0 .5rem; }
+.precio { font-size: 1.3rem; font-weight: 700; margin: .3rem 0; }
+.estado { font-size: .85rem; color: #2f6f3e; }
+.estado.agotado { color: #a61b1b; font-weight: 600; }
+.detalle { max-width: 640px; }
+.ficha { border-collapse: collapse; margin: 1rem 0; }
+.ficha th, .ficha td { text-align: left; padding: .35rem 1rem .35rem 0; border-bottom: 1px solid #e4e7eb; }
+
+.mensaje { background: #e6f4ea; border: 1px solid #8cc79b; padding: .7rem 1rem; border-radius: 4px; }
+.mensaje-error { background: #fdecec; border-color: #e3a1a1; }
+.mensaje ul { margin: .3rem 0 0; }
+
+.tabla-contenedor { overflow-x: auto; }
+.tabla { width: 100%; border-collapse: collapse; background: #fff; font-size: .9rem; }
+.tabla th, .tabla td { border: 1px solid #d9dee5; padding: .45rem .55rem; text-align: left; vertical-align: middle; }
+.tabla th { background: #eef1f5; }
+.tabla td.num { text-align: right; white-space: nowrap; }
+.tabla td.bajo { color: #a61b1b; font-weight: 600; }
+.tabla tr.inactivo td { color: #9aa5b1; }
+.en-linea { display: inline-flex; gap: .3rem; margin: 0; }
+.en-linea input { min-width: 0; width: 90px; padding: .3rem; }
+.en-linea button { padding: .3rem .7rem; }
+
+.pie { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; max-width: 1180px;
+       margin: 0 auto; padding: .8rem 2rem 1.5rem; font-size: .8rem; color: #52606d; }
+.pie code { background: #e4e7eb; padding: .1rem .35rem; border-radius: 3px; }
