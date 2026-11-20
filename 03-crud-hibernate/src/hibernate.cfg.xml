@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!-- Configuración de Hibernate para el módulo CRUD de productos de TiendaVirtual -->
+<hibernate-configuration>
+    <session-factory>
+        <!-- Conexión JDBC: Hibernate usa el driver MySQL Connector/J por debajo -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3307/tienda_virtual</property>
+        <property name="hibernate.connection.username">tienda_orm</property>
+        <property name="hibernate.connection.password">TiendaOrm3336103*</property>
+        <property name="hibernate.connection.pool_size">2</property>
+        <!-- El dialecto de MySQL lo detecta Hibernate automáticamente a partir de la conexión -->
+
+
+        <!-- validate: Hibernate comprueba que las entidades coinciden con las tablas existentes
+             y no modifica el esquema creado en GA6-220501096-AA2-EV03 -->
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+
+        <!-- Muestra en consola el SQL que genera Hibernate -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.highlight_sql">false</property>
+
+        <!-- Clases de entidad mapeadas -->
+        <mapping class="co.edu.sena.adso.orm.modelo.Categoria"/>
+        <mapping class="co.edu.sena.adso.orm.modelo.Marca"/>
+        <mapping class="co.edu.sena.adso.orm.modelo.Producto"/>
+    </session-factory>
+</hibernate-configuration>
