@@ -7,6 +7,7 @@ Autor: Sebastián Bolaño Barraza.
 |---|---|---|
 | `01-conexion-jdbc` | GA7-220501096-AA2-EV01 | Aplicación de consola que se conecta a MySQL con JDBC y hace el CRUD de la tabla `usuario`. |
 | `02-modulo-productos-web` | GA7-220501096-AA2-EV02 | Módulo web de productos con servlets, JSP y JDBC (patrón MVC) sobre la base `tienda_virtual`. |
+| `03-crud-hibernate` | GA7-220501096-AA3-EV01 | CRUD de productos con el framework Hibernate ORM 7 (entidades, HQL y transacciones). |
 
 ## Requisitos
 
@@ -41,6 +42,15 @@ CATALINA_HOME=/ruta/a/apache-tomcat-11 ./construir.sh desplegar
 5. Iniciar Tomcat y abrir http://localhost:8080/tienda
 
 Rutas: `/catalogo` (GET), `/producto?id=N` (GET) y `/admin/productos` (GET y POST).
+
+## 03-crud-hibernate
+
+```bash
+cd 03-crud-hibernate
+mysql -u root -p < sql/01_usuario_orm.sql
+./descargar_librerias.sh      # Hibernate ORM 7.4.17 y dependencias desde Maven Central
+./ejecutar.sh
+```
 
 ## Nota sobre las credenciales
 
